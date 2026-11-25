@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+  <meta content="Conhe&ccedil;a o Curso T&eacute;cnico em Desenvolvimento de Sistemas do CETI Helv&iacute;dio Nunes: tecnologia, criatividade, projetos e oportunidades. SEDUC-PI." name="description"/>
+  <meta content="#24103f" name="theme-color"/>
+  <title>
+   Desenvolvimento de Sistemas | CETI Helv&iacute;dio Nunes
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <style>
+   :root{--navy:#082846;--navy2:#0b3962;--blue:#1768c5;--cyan:#20c5d9;--gold:#f4bd4f;--ink:#14243a;--muted:#64748b;--paper:#f5f8fc;--white:#fff;--line:#e2eaf3;--shadow:0 18px 45px rgba(11,43,76,.09);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.72}a{color:inherit}button,a{ -webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}.container{width:min(1160px,calc(100% - 40px));margin:auto}
+.topline{background:#061e35;color:#d7e7f8;font-size:.83rem;padding:8px 0}.topline .container{display:flex;align-items:center;justify-content:space-between;gap:12px}.topline span{display:flex;align-items:center;gap:8px}.topline .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+header{position:sticky;top:0;z-index:20;background:#fffefdf2;backdrop-filter:blur(14px);border-bottom:1px solid #e8edf3}.nav{display:flex;align-items:center;gap:24px;min-height:76px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:max-content}.brandmark{width:48px;height:48px;display:grid;place-items:center;background:linear-gradient(145deg,var(--navy),var(--blue));border-radius:15px;color:white;position:relative;overflow:hidden;box-shadow:0 8px 20px #1768c533}.brandmark svg{width:29px}.brandtext strong{display:block;font:800 .95rem Manrope,sans-serif;letter-spacing:-.02em;color:var(--navy)}.brandtext small{display:block;color:#64748b;font-size:.7rem;letter-spacing:.04em}.navlinks{margin-left:auto;display:flex;gap:22px;align-items:center}.navlinks a{text-decoration:none;font-size:.88rem;font-weight:700;color:#52657c;transition:.2s}.navlinks a:hover{color:var(--blue)}.navcta{padding:10px 15px;border-radius:12px;background:var(--navy);color:white!important}
+.hero{position:relative;overflow:hidden;color:white;background:linear-gradient(115deg,#082846 0%,#0b3962 57%,#1768c5 100%);padding:76px 0 92px}.hero:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;border:1px solid #ffffff15;right:-180px;top:-220px;box-shadow:0 0 0 55px #ffffff06,0 0 0 110px #ffffff05}.hero:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:#20c5d926;filter:blur(55px);bottom:-90px;left:10%}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:48px}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #ffffff35;background:#ffffff12;border-radius:100px;padding:8px 13px;font-size:.78rem;letter-spacing:.05em;font-weight:700;color:#e3f3ff}.eyebrow i{width:7px;height:7px;background:var(--gold);border-radius:50%}.hero h1{font:800 clamp(2.5rem,5.4vw,4.7rem)/1.08 Manrope,sans-serif;letter-spacing:-.055em;margin:22px 0 20px;max-width:780px}.hero h1 span{color:#20c5d9}.hero-copy{max-width:610px;font-size:1.13rem;color:#d7e9f7}.hero-copy strong{color:#fff}.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;padding:13px 19px;border-radius:13px;font-weight:800;font-size:.94rem;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--gold);color:#142d48;box-shadow:0 10px 25px #f4bd4f22}.btn-outline{border:1px solid #ffffff55;color:#fff;background:#ffffff0b}.hero-note{font-size:.84rem;color:#b8d3e8;margin-top:22px}.hero-visual{min-height:340px;display:grid;place-items:center;position:relative}.codewindow{width:min(100%,430px);background:#07182b;border:1px solid #ffffff25;border-radius:20px;padding:18px;box-shadow:0 25px 60px #0005;transform:rotate(1.5deg)}.windowbar{display:flex;gap:7px;padding-bottom:16px;border-bottom:1px solid #ffffff14}.windowbar i{width:9px;height:9px;border-radius:50%;background:#fb7185}.windowbar i:nth-child(2){background:#fbbf24}.windowbar i:nth-child(3){background:#34d399}.code{font: .87rem/1.85 ui-monospace,Consolas,monospace;color:#b6c8df;padding:8px 2px}.code .purple{color:#93c5fd}.code .blue{color:#67e8f9}.code .green{color:#86efac}.code .yellow{color:#fde68a}.code .pink{color:#f9a8d4}.code .indent{padding-left:22px}.floating-chip{position:absolute;background:#fff;color:var(--navy);border-radius:15px;padding:12px 16px;box-shadow:0 16px 35px #061f3a45;font-weight:800;font-size:.83rem}.chip-one{top:12px;right:-5px}.chip-two{bottom:16px;left:-2px}.floating-chip span{display:block;color:#6a7b90;font-weight:500;font-size:.72rem}
+.proof{position:relative;margin-top:-38px;z-index:4}.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);background:white;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}.proof-item{padding:22px 26px;display:flex;gap:15px;align-items:center}.proof-item+.proof-item{border-left:1px solid var(--line)}.proof-icon{width:46px;height:46px;flex:0 0 46px;border-radius:14px;background:#eaf4ff;color:var(--blue);display:grid;place-items:center;font-size:1.35rem}.proof-item strong{display:block;font:800 1rem Manrope,sans-serif}.proof-item small{color:var(--muted);display:block;font-size:.82rem}
+section{padding:82px 0}.section-label{font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;color:var(--blue);font-weight:800;margin-bottom:12px}.section-title{font:800 clamp(1.85rem,3.5vw,2.7rem)/1.2 Manrope,sans-serif;letter-spacing:-.04em;margin:0 0 16px;color:var(--navy)}.lead{max-width:780px;color:#586b83;font-size:1.07rem;margin:0}.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start;margin-top:35px}.intro-panel{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:0 10px 30px #0c33520a}.intro-panel h3{font:800 1.2rem Manrope,sans-serif;margin:0 0 12px}.intro-panel p{color:#5b6d83;margin:0 0 14px}.intro-panel p:last-child{margin-bottom:0}.highlight{border-left:4px solid var(--gold);padding-left:18px;color:var(--navy)!important;font-weight:700}
+.soft-section{background:#eaf2fa}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}.card{padding:25px;background:white;border:1px solid #e1eaf4;border-radius:20px;box-shadow:0 9px 24px #0c33520a;transition:.22s}.card:hover{transform:translateY(-5px);box-shadow:0 16px 32px #0c33521a}.card-icon{width:54px;height:54px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,#e4f3ff,#e7faff);font-size:1.6rem;margin-bottom:16px}.card h3{font:800 1.08rem Manrope,sans-serif;margin:0 0 10px;color:var(--navy)}.card p{color:#62748a;margin:0;font-size:.95rem}.card ul{padding-left:20px;color:#60738a;margin:14px 0 0}.card li{margin:6px 0}.learning{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:36px}.learning-card{background:white;border:1px solid var(--line);border-radius:22px;padding:30px}.learning-card h3{font:800 1.24rem Manrope,sans-serif;color:var(--navy);margin:0 0 8px}.learning-card .mini{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue)}.learning-card p{color:#60738a}.list-check{list-style:none;padding:0;margin:18px 0}.list-check li{padding-left:29px;position:relative;margin:10px 0;color:#50647c}.list-check li:before{content:"✓";position:absolute;left:0;top:0;color:#0b9ab1;font-weight:900;background:#e5f8fb;width:20px;height:20px;border-radius:7px;text-align:center;line-height:20px}.sample{background:#081e35;color:#d5e7f7;border-radius:14px;padding:18px;overflow:auto;font: .84rem/1.75 ui-monospace,Consolas,monospace;margin-top:18px}.sample .t{color:#67e8f9}.sample .v{color:#86efac}.sample .c{color:#9aaec5}
+.path{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.path-item{background:white;border:1px solid var(--line);border-radius:19px;padding:23px;position:relative}.year{display:inline-block;background:#e9f3ff;color:#1768c5;padding:6px 11px;border-radius:50px;font-size:.77rem;font-weight:800}.path-item h3{font:800 1.1rem Manrope,sans-serif;color:var(--navy);margin:13px 0 8px}.path-item p{margin:0;color:#60738a}.path-item .pathnum{position:absolute;right:18px;top:18px;color:#d9e8f6;font:800 2rem Manrope}
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}.tech{background:white;border:1px solid var(--line);border-radius:17px;padding:21px}.tech .tag{font-size:.75rem;font-weight:800;color:var(--blue);letter-spacing:.06em}.tech h3{font:800 1.1rem Manrope,sans-serif;margin:8px 0}.tech p{color:#63758a;margin:0;font-size:.91rem}.tagline{margin-top:22px;background:#0b365b;color:#e3f1ff;border-radius:17px;padding:22px 25px;display:flex;gap:16px;align-items:center}.tagline b{color:#6ee2f2}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:30px}.project{min-height:220px;border-radius:20px;padding:24px;color:white;background:linear-gradient(145deg,#0b3155,#145e85);position:relative;overflow:hidden}.project:nth-child(2){background:linear-gradient(145deg,#114d65,#07899b)}.project:nth-child(3){background:linear-gradient(145deg,#23376b,#4963b8)}.project:after{content:"";position:absolute;width:160px;height:160px;border:1px solid #ffffff25;border-radius:50%;right:-60px;bottom:-60px;box-shadow:0 0 0 24px #ffffff06,0 0 0 48px #ffffff05}.project .emoji{font-size:1.8rem}.project h3{font:800 1.12rem Manrope,sans-serif;margin:12px 0}.project p{color:#d6e8f5;margin:0;max-width:42ch;font-size:.92rem}.project small{display:inline-block;margin-top:17px;color:#bceefa;font-weight:700}
+.future{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin-top:32px}.future-panel{border-radius:22px;padding:30px;background:#fff;border:1px solid var(--line)}.future-panel h3{font:800 1.2rem Manrope,sans-serif;color:var(--navy);margin:0 0 12px}.future-panel p{color:#60738a}.career-tags{display:flex;flex-wrap:wrap;gap:9px}.career-tags span{background:#edf5ff;color:#205b94;border-radius:99px;padding:8px 12px;font-size:.82rem;font-weight:700}.callout{margin-top:28px;background:linear-gradient(120deg,#0a2d4d,#0d5279);border-radius:24px;padding:34px;color:white;display:flex;justify-content:space-between;align-items:center;gap:24px}.callout h3{font:800 1.5rem Manrope,sans-serif;margin:0 0 8px}.callout p{color:#c7e1f4;margin:0;max-width:700px}.callout .btn{white-space:nowrap}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}.faq article{background:white;border:1px solid var(--line);border-radius:16px;padding:22px}.faq h3{font:800 1rem Manrope,sans-serif;margin:0 0 8px;color:var(--navy)}.faq p{margin:0;color:#60738a;font-size:.94rem}.resources{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:30px}.resource{display:block;text-decoration:none;background:white;border:1px solid var(--line);border-radius:16px;padding:17px 19px;transition:.2s}.resource:hover{border-color:#75cce0;transform:translateY(-2px)}.resource strong{display:block;color:var(--navy);font-size:.95rem}.resource small{color:#63758b}
+footer{background:#061d33;color:#b8cde0;padding:44px 0 25px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:15px}.footer-brand strong{color:white;font:800 1rem Manrope,sans-serif}.footer p{color:#9eb7ce;max-width:480px;font-size:.9rem}.footer h4{color:white;margin:0 0 12px;font:800 .95rem Manrope,sans-serif}.footer a{display:block;text-decoration:none;color:#b8cde0;margin:8px 0;font-size:.88rem}.footer a:hover{color:#67d9eb}.copyright{border-top:1px solid #ffffff1c;margin-top:32px;padding-top:20px;font-size:.8rem;color:#88a4bf}.official-note{font-size:.72rem;color:#8da8c2;margin-top:12px}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:25px}.hero-visual{min-height:310px}.navlinks{gap:13px}.navlinks a:not(.navcta){display:none}.intro-grid,.learning,.future{grid-template-columns:1fr}.cards,.tech-grid,.project-grid{grid-template-columns:repeat(2,1fr)}.path{grid-template-columns:1fr}.path-item{display:block}.proof-item{padding:17px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
+@media(max-width:600px){.container{width:min(100% - 28px,1160px)}.topline .container{font-size:.72rem}.topline span:last-child{display:none}.nav{min-height:67px}.brandmark{width:42px;height:42px}.brandtext strong{font-size:.84rem}.brandtext small{font-size:.64rem}.navcta{padding:9px 11px;font-size:.8rem}.hero{padding:55px 0 72px}.hero h1{font-size:2.45rem}.hero-copy{font-size:1rem}.hero-visual{min-height:280px}.codewindow{padding:14px}.chip-one{right:0}.chip-two{left:0}.proof-grid{grid-template-columns:1fr}.proof-item+.proof-item{border-left:0;border-top:1px solid var(--line)}.proof{margin-top:-25px}section{padding:60px 0}.cards,.tech-grid,.project-grid,.faq,.resources{grid-template-columns:1fr}.intro-panel,.learning-card{padding:23px}.callout{display:block;padding:26px}.callout .btn{margin-top:18px}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}}
+ .study-gallery{padding:55px 0 65px;background:#eaf2fa}.gallery-heading{margin-bottom:25px}.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.gallery-grid figure{margin:0;background:white;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}.gallery-grid img{width:100%;height:300px;object-fit:cover;display:block}.gallery-grid figcaption{padding:14px 18px;color:var(--navy);font-weight:800}.course-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.course-facts span{background:#eaf2fa;color:var(--navy);padding:11px 15px;border-radius:999px;font-size:.9rem}.course-facts strong{font-weight:800}
+.course-highlights{padding:72px 0;background:#fff}.highlight-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}.highlight-grid article{padding:24px;border-radius:18px;border:1px solid var(--line);background:#f5f8fc}.highlight-grid article>span{font:800 .8rem Manrope;color:var(--blue)}.highlight-grid h3{font:800 1.15rem Manrope;margin:10px 0}.highlight-grid p{margin:0;color:var(--muted)}.seduc-panel{margin-top:28px;background:linear-gradient(120deg,#082846,#0b3962);border-radius:22px;color:#fff;padding:26px;display:flex;align-items:center;gap:22px}.seduc-mark{font:800 1.4rem Manrope;letter-spacing:-.04em;border:1px solid #ffffff45;border-radius:12px;padding:12px 15px;white-space:nowrap}.seduc-mark span{color:#20c5d9}.seduc-panel h3{margin:0 0 8px;font:800 1.2rem Manrope}.seduc-panel p{margin:0 0 10px;color:#d7e9f7}.seduc-panel a{color:#20c5d9;font-weight:800;text-decoration:none}@media(max-width:600px){.gallery-grid,.highlight-grid{grid-template-columns:1fr}.gallery-grid img{height:230px}.seduc-panel{display:block}.seduc-mark{display:inline-block;margin-bottom:15px}}
+.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--cyan),var(--gold));z-index:100;transition:width .08s linear}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+.reveal-stagger>*{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.2,1)}
+.reveal-stagger.is-visible>*{opacity:1;transform:translateY(0)}
+.reveal-stagger.is-visible>*:nth-child(2){transition-delay:.08s}.reveal-stagger.is-visible>*:nth-child(3){transition-delay:.16s}.reveal-stagger.is-visible>*:nth-child(4){transition-delay:.24s}.reveal-stagger.is-visible>*:nth-child(5){transition-delay:.32s}.reveal-stagger.is-visible>*:nth-child(6){transition-delay:.4s}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}.reveal,.reveal-stagger>*{opacity:1!important;transform:none!important}}
+
+.photo-card{position:relative;min-height:300px}.photo-card img{width:100%;height:300px;object-fit:cover;background:#dcecf8}.photo-card figcaption{display:flex;flex-direction:column;gap:3px}.photo-card figcaption small{font-size:.72rem;font-weight:500;color:#64748b}.photo-fallback{width:100%;height:300px;background:#eaf2fa}.photo-fallback svg{width:100%;height:100%;display:block}.seduc-mark{background:#fff;border:1px solid #dce7f1;border-radius:15px;padding:10px 14px;min-width:240px;display:flex;align-items:center;justify-content:center}.seduc-mark img{display:block;width:100%;max-width:250px;height:auto;object-fit:contain}.seduc-mark span[hidden]{color:#082846;font-weight:900;font-size:1.15rem}.seduc-panel{background:linear-gradient(120deg,#082846,#0b3962 62%,#1768c5)}.study-gallery{background:#eaf2fa}
+
+/* ==========================================================
+   IDENTIDADE VISUAL — ROXO / CIANO / MAGENTA
+   Paleta consolidada em um único bloco de CSS
+   ========================================================== */
+:root {
+  --navy: #24103f;
+  --navy2: #3b176d;
+  --blue: #7c3aed;
+  --cyan: #22d3ee;
+  --gold: #e879f9;
+  --ink: #24123d;
+  --muted: #6e6285;
+  --paper: #faf7ff;
+  --white: #fff;
+  --line: #e8dff7;
+  --shadow: 0 18px 45px rgba(60, 20, 100, .12);
+}
+body { background: var(--paper); color: var(--ink); }
+.topline, footer, .footer, .site-footer { background: #1b1030; color: #f4eaff; }
+.topline .dot, .eyebrow i { background: var(--gold); }
+header { background: rgba(250, 247, 255, .96); border-bottom: 2px solid var(--line); }
+.brandmark { background: linear-gradient(145deg, var(--navy2), #a21caf); box-shadow: 0 8px 20px #7c3aed44; }
+.brandtext strong { color: var(--navy2); }
+.navlinks a { color: #63517d; }
+.navlinks a:hover { color: #a21caf; }
+.navcta, .btn-primary { background: var(--blue) !important; color: #fff !important; }
+.hero { background: linear-gradient(115deg, var(--navy) 0%, #4c1d95 48%, var(--blue) 78%, #a21caf 100%); }
+.hero h1 span { color: var(--cyan); }
+.hero:after { background: #a21caf35; }
+.proof-grid { background: #fff; border-color: var(--line); }
+.proof-icon { background: #f3e8ff; color: var(--blue); }
+.section-label { color: #9333ea; }
+.section-title, section:not(.hero) h2, section:not(.hero) h3 { color: var(--navy2); }
+.soft-section, .study-gallery { background: #f1eaff; }
+.intro-panel, .card, .learning-card, .path-item, .tech, .future-panel,
+.faq article, .resource, .gallery-grid figure, .highlight-grid article {
+  border-color: var(--line);
+  box-shadow: 0 10px 28px #4c1d9510;
+}
+.highlight { border-left-color: #d946ef; color: #4c1d95 !important; }
+.card-icon { background: linear-gradient(135deg, #f3e8ff, #cffafe); }
+.card h3, .learning-card h3, .path-item h3, .faq h3 { color: #4c1d95; }
+.list-check li:before { color: #a21caf; background: #fae8ff; }
+.year, .career-tags span, .course-facts span { background: #f3e8ff; color: var(--blue); }
+.tech .tag { color: #7c3aed; }
+.tagline { background: linear-gradient(110deg, var(--navy), var(--blue)); }
+.tagline b { color: var(--cyan); }
+.project, .project:nth-child(1), .project:nth-child(2), .project:nth-child(3) {
+  background: linear-gradient(145deg, var(--navy2), var(--blue)) !important;
+  color: #fff !important;
+}
+.callout, .seduc-panel { background: linear-gradient(120deg, var(--navy), #4c1d95 62%, var(--blue)); }
+.resources .resource:hover { border-color: #a855f7; }
+.resource strong, .gallery-grid figcaption, .highlight-grid h3 { color: #4c1d95; }
+.scroll-progress { background: linear-gradient(90deg, var(--blue), var(--cyan), var(--gold)); }
+.footer a:hover { color: var(--cyan); }
+.btn-outline { border-color: #e9d5ff; color: #fff; }
+  
+
+/* ==========================================================
+   OTIMIZAÇÃO RESPONSIVA — CELULARES E TABLETS
+   Regras adicionadas no final para prevalecer sobre estilos antigos.
+   ========================================================== */
+html {
+  scroll-padding-top: 96px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body {
+  width: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+img, svg, video, iframe {
+  max-width: 100%;
+}
+.container, main, section, header, footer, .nav, .hero-grid,
+.intro-grid, .learning, .future, .gallery-grid, .footer-grid {
+  min-width: 0;
+}
+
+/* Botão do menu: aparece somente em tablets e celulares. */
+.nav-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: #fff;
+  color: var(--navy);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.nav-toggle[aria-expanded="true"] span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  html { scroll-padding-top: 86px; }
+  .container { width: min(100% - 36px, 760px); }
+  .nav {
+    min-height: 72px;
+    padding: 10px 0;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 9px;
+  }
+  .brandmark {
+    width: 43px;
+    height: 43px;
+    flex: 0 0 43px;
+  }
+  .brandtext strong { font-size: .84rem; }
+  .brandtext small { font-size: .63rem; }
+  .nav-toggle { display: inline-flex; }
+  .navlinks {
+    display: none;
+    order: 3;
+    flex: 0 0 100%;
+    width: 100%;
+    margin: 0;
+    padding: 8px;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 3px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 14px 30px rgba(20, 36, 58, .12);
+  }
+  .navlinks.is-open { display: flex; }
+  .navlinks a,
+  .navlinks a:not(.navcta) {
+    display: flex;
+    min-height: 46px;
+    align-items: center;
+    padding: 11px 13px;
+    border-radius: 10px;
+    font-size: .94rem;
+  }
+  .navlinks a:hover { background: #f2f7fc; }
+  .navlinks .navcta {
+    justify-content: center;
+    margin-top: 3px;
+  }
+  .hero { padding: 58px 0 76px; }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .hero-visual { min-height: 300px; }
+  .codewindow { width: min(100%, 520px); }
+  .proof-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .proof-item { padding: 17px 14px; gap: 10px; }
+  .proof-item strong { font-size: .9rem; }
+  .proof-item small { font-size: .76rem; }
+  .intro-grid, .learning, .future { grid-template-columns: 1fr; gap: 18px; }
+  .cards, .tech-grid, .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .path { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  html { scroll-padding-top: 82px; }
+  .container { width: calc(100% - 32px); }
+  .topline { padding: 7px 0; }
+  .topline .container {
+    justify-content: center;
+    text-align: center;
+    font-size: .72rem;
+    line-height: 1.35;
+  }
+  .topline span:last-child { display: none; }
+  header { position: sticky; }
+  .nav { min-height: 64px; padding: 8px 0; }
+  .brand { max-width: calc(100% - 58px); }
+  .brandmark { width: 40px; height: 40px; flex-basis: 40px; }
+  .brandtext { min-width: 0; }
+  .brandtext strong { font-size: .76rem; line-height: 1.2; }
+  .brandtext small { font-size: .57rem; line-height: 1.25; letter-spacing: .025em; }
+  .nav-toggle { width: 44px; height: 44px; flex-basis: 44px; }
+  .navlinks { padding: 7px; }
+  .hero { padding: 45px 0 60px; }
+  .hero-grid { gap: 16px; }
+  .eyebrow { max-width: 100%; font-size: .69rem; padding: 7px 10px; }
+  .hero h1 {
+    font-size: clamp(2.15rem, 10vw, 3.1rem);
+    line-height: 1.08;
+    margin: 18px 0 14px;
+    letter-spacing: -.05em;
+  }
+  .hero-copy { font-size: .97rem; line-height: 1.65; margin: 0 0 13px; }
+  .hero-buttons { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 20px; }
+  .btn { width: 100%; min-height: 48px; padding: 12px 15px; font-size: .9rem; }
+  .hero-note { font-size: .78rem; line-height: 1.5; margin-top: 17px; }
+  .hero-visual {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 6px 0 0;
+  }
+  .codewindow {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px;
+    transform: none;
+    border-radius: 16px;
+  }
+  .code { font-size: .76rem; line-height: 1.75; overflow-x: auto; }
+  .floating-chip {
+    position: static;
+    width: fit-content;
+    max-width: 100%;
+    padding: 10px 12px;
+    font-size: .73rem;
+    border-radius: 12px;
+  }
+  .chip-one { align-self: flex-end; }
+  .chip-two { align-self: flex-start; }
+  .proof { margin-top: -18px; }
+  .proof-grid { grid-template-columns: 1fr; border-radius: 16px; }
+  .proof-item { padding: 14px 16px; }
+  .proof-item+.proof-item { border-left: 0; border-top: 1px solid var(--line); }
+  .proof-item strong { font-size: .92rem; }
+  .proof-item small { font-size: .78rem; }
+  section { padding: 52px 0; }
+  .section-label { font-size: .7rem; margin-bottom: 9px; }
+  .section-title { font-size: clamp(1.55rem, 7.2vw, 2.1rem); line-height: 1.18; margin-bottom: 12px; }
+  .lead { font-size: .96rem; line-height: 1.65; }
+  .intro-grid { margin-top: 22px; }
+  .intro-panel, .learning-card { padding: 20px; border-radius: 17px; }
+  .cards, .tech-grid, .project-grid, .faq, .resources,
+  .gallery-grid, .highlight-grid { grid-template-columns: 1fr; }
+  .cards, .tech-grid, .project-grid, .resources { gap: 13px; margin-top: 22px; }
+  .card { padding: 20px; }
+  .card:hover { transform: none; }
+  .learning { gap: 14px; margin-top: 24px; }
+  .path { gap: 12px; margin-top: 23px; }
+  .path-item { padding: 20px; }
+  .tech { padding: 18px; }
+  .project { min-height: 0; padding: 21px; }
+  .future { gap: 14px; margin-top: 22px; }
+  .future-panel { padding: 20px; }
+  .career-tags { gap: 7px; }
+  .career-tags span { font-size: .76rem; padding: 7px 10px; }
+  .callout { display: block; padding: 23px 20px; border-radius: 18px; }
+  .callout h3 { font-size: 1.25rem; }
+  .callout .btn { margin-top: 17px; }
+  .faq { gap: 11px; margin-top: 22px; }
+  .faq article { padding: 18px; }
+  .resource { padding: 16px; }
+  .study-gallery { padding: 45px 0 52px; }
+  .gallery-grid { gap: 14px; }
+  .gallery-grid img, .photo-card img { height: 220px; }
+  .gallery-grid figcaption { padding: 12px 14px; }
+  .course-facts { gap: 8px; }
+  .course-facts span { flex: 1 1 145px; padding: 9px 12px; font-size: .82rem; }
+  .highlight-grid { gap: 11px; margin-top: 22px; }
+  .highlight-grid article { padding: 19px; }
+  .seduc-panel { display: block; padding: 21px; border-radius: 18px; }
+  .seduc-mark { min-width: 0; width: fit-content; max-width: 100%; margin-bottom: 15px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 22px; }
+  .footer-grid>div:first-child { grid-column: auto; }
+  footer { padding: 35px 0 22px; }
+  .copyright { margin-top: 24px; padding-top: 16px; font-size: .74rem; line-height: 1.55; }
+  .official-note { font-size: .68rem; line-height: 1.5; }
+  .scroll-progress { height: 3px; }
+}
+
+@media (max-width: 380px) {
+  .container { width: calc(100% - 26px); }
+  .brandtext strong { font-size: .7rem; }
+  .brandtext small { font-size: .53rem; }
+  .hero h1 { font-size: 2.05rem; }
+  .hero-copy { font-size: .92rem; }
+  .codewindow { padding: 11px; }
+  .code { font-size: .7rem; }
+  .intro-panel, .learning-card, .card, .future-panel { padding: 17px; }
+}
+
+@media (hover: none) {
+  .btn:hover, .card:hover, .resource:hover { transform: none; }
+}
+
+  </style>
+ </head>
+ <body>
+  <div aria-hidden="true" class="scroll-progress">
+  </div>
+  <div class="topline">
+   <div class="container">
+    <span>
+     <i class="dot">
+     </i>
+     Educa&ccedil;&atilde;o p&uacute;blica &middot; Tecnologia &middot; Novas possibilidades
+    </span>
+    <span>
+     Ensino M&eacute;dio Integrado &agrave; Educa&ccedil;&atilde;o Profissional
+    </span>
+   </div>
+  </div>
+  <header>
+   <div class="container nav">
+    <a aria-label="P&aacute;gina inicial do curso" class="brand" href="#inicio">
+     <span aria-hidden="true" class="brandmark" style="font:800 1rem Manrope,sans-serif;letter-spacing:-.04em">
+      HN
+     </span>
+     <span class="brandtext">
+      <strong>
+       CETI HELV&Iacute;DIO NUNES
+      </strong>
+      <small>
+       DESENVOLVIMENTO DE SISTEMAS
+      </small>
+     </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-controls="main-navigation" aria-expanded="false">
+     <span></span><span></span><span></span>
+    </button>
+    <nav id="main-navigation" aria-label="Navega&ccedil;&atilde;o principal" class="navlinks">
+     <a href="#curso">
+      O curso
+     </a>
+     <a href="#aprendizado">
+      Aprendizado
+     </a>
+     <a href="#projetos">
+      Projetos
+     </a>
+     <a href="#futuro">
+      Carreira
+     </a>
+     <a href="#perguntas">
+      D&uacute;vidas
+     </a>
+     <a class="navcta" href="#links">
+      Explore os recursos &nearrow;
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main id="inicio">
+   <section class="hero">
+    <div class="container hero-grid">
+     <div>
+      <span class="eyebrow">
+       <i>
+       </i>
+       SEDUC-PI &middot; Ensino em Tempo Integral
+      </span>
+      <h1>
+       Transforme ideias em
+       <span>
+        tecnologia.
+       </span>
+      </h1>
+      <p class="hero-copy">
+       J&aacute; imaginou criar um site, desenvolver um aplicativo ou construir um sistema que resolva um problema real? No
+       <strong>
+        Curso T&eacute;cnico em Desenvolvimento de Sistemas do CETI Helv&iacute;dio Nunes
+       </strong>
+       , a tecnologia deixa de ser apenas algo que voc&ecirc; usa e passa a ser algo que voc&ecirc; aprende a construir.
+      </p>
+      <p class="hero-copy">
+       Uma forma&ccedil;&atilde;o que conecta Ensino M&eacute;dio, conhecimento t&eacute;cnico, criatividade, colabora&ccedil;&atilde;o e prepara&ccedil;&atilde;o para os desafios do mundo digital.
+      </p>
+      <div class="hero-buttons">
+       <a class="btn btn-primary" href="#curso">
+        Descubra o curso
+        <span>
+         &rarr;
+        </span>
+       </a>
+       <a class="btn btn-outline" href="#aprendizado">
+        Veja o que se aprende
+       </a>
+      </div>
+      <div class="hero-note">
+       Um espa&ccedil;o para aprender, experimentar, criar e imaginar novas possibilidades.
+      </div>
+     </div>
+     <div aria-label="Ilustra&ccedil;&atilde;o de c&oacute;digo de programa&ccedil;&atilde;o" class="hero-visual">
+      <div class="codewindow">
+       <div class="windowbar">
+        <i>
+        </i>
+        <i>
+        </i>
+        <i>
+        </i>
+       </div>
+       <div class="code">
+        <div>
+         <span class="purple">
+          const
+         </span>
+         <span class="blue">
+          ideia
+         </span>
+         =
+         <span class="green">
+          "seu pr&oacute;ximo projeto"
+         </span>
+         ;
+        </div>
+        <div>
+         <span class="purple">
+          function
+         </span>
+         <span class="yellow">
+          transformar
+         </span>
+         () {
+        </div>
+        <div class="indent">
+         <span class="purple">
+          return
+         </span>
+         <span class="blue">
+          aprender
+         </span>
+         +
+         <span class="blue">
+          criatividade
+         </span>
+         ;
+        </div>
+        <div>
+         }
+        </div>
+        <br/>
+        <div>
+         <span class="c">
+          // Todo projeto come&ccedil;a com curiosidade
+         </span>
+        </div>
+        <div>
+         <span class="blue">
+          transformar
+         </span>
+         ();
+         <span class="pink">
+          // vamos criar!
+         </span>
+        </div>
+       </div>
+      </div>
+      <div class="floating-chip chip-one">
+       💡 Ideias que viram projetos
+       <span>
+        Aprender fazendo
+       </span>
+      </div>
+      <div class="floating-chip chip-two">
+       ⌨️ C&oacute;digo, criatividade e colabora&ccedil;&atilde;o
+       <span>
+        Conhecimento para o futuro
+       </span>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="proof">
+    <div class="container">
+     <div class="proof-grid">
+      <div class="proof-item">
+       <div class="proof-icon">
+        🎓
+       </div>
+       <div>
+        <strong>
+         Ensino M&eacute;dio + T&eacute;cnico
+        </strong>
+        <small>
+         Uma forma&ccedil;&atilde;o integrada
+        </small>
+       </div>
+      </div>
+      <div class="proof-item">
+       <div class="proof-icon">
+        🕘
+       </div>
+       <div>
+        <strong>
+         Tempo integral
+        </strong>
+        <small>
+         Aprendizagem e viv&ecirc;ncias escolares
+        </small>
+       </div>
+      </div>
+      <div class="proof-item">
+       <div class="proof-icon">
+        💻
+       </div>
+       <div>
+        <strong>
+         Aprender na pr&aacute;tica
+        </strong>
+        <small>
+         Conhecimentos que ganham vida em projetos
+        </small>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <section aria-label="Estudantes em ambiente de aprendizagem de tecnologia" class="study-gallery">
+    <div class="container">
+     <div class="gallery-heading">
+      <div class="section-label">
+       Aprender fazendo
+      </div>
+      <h2 class="section-title">
+       Tecnologia se aprende na pr&aacute;tica
+      </h2>
+      <p class="lead">
+       Estudar, experimentar, colaborar e transformar ideias em projetos.
+      </p>
+     </div>
+     <div class="gallery-grid">
+      <figure class="photo-card">
+      <img src="seduc1.jpn.jpeg" alt="Estudante utilizando computador em atividade de aprendizagem" loading="lazy" decoding="async" width="900" height="600">
+       <div aria-label="Ilustra&ccedil;&atilde;o de estudantes usando computadores" class="photo-fallback" hidden="">
+        <svg aria-label="Estudantes aprendendo tecnologia em computadores" role="img" viewbox="0 0 900 480">
+         <rect fill="#eaf2fa" height="480" width="900">
+         </rect>
+         <circle cx="735" cy="90" fill="#20c5d9" opacity=".18" r="110">
+         </circle>
+         <rect fill="#0b3962" height="25" rx="12" width="700" x="100" y="285">
+         </rect>
+         <rect fill="#082846" height="135" rx="14" width="205" x="160" y="140">
+         </rect>
+         <rect fill="#dff5fb" height="103" rx="7" width="175" x="175" y="155">
+         </rect>
+         <path d="M195 190h105M195 212h75M195 234h125" stroke="#1768c5" stroke-linecap="round" stroke-width="9">
+         </path>
+         <rect fill="#082846" height="135" rx="14" width="205" x="535" y="140">
+         </rect>
+         <rect fill="#dff5fb" height="103" rx="7" width="175" x="550" y="155">
+         </rect>
+         <path d="M570 190h105M570 212h75M570 234h125" stroke="#1768c5" stroke-linecap="round" stroke-width="9">
+         </path>
+         <circle cx="270" cy="105" fill="#d59a73" r="34">
+         </circle>
+         <path d="M220 260q4-100 50-100t50 100" fill="#1768c5">
+         </path>
+         <circle cx="640" cy="105" fill="#8f5b45" r="34">
+         </circle>
+         <path d="M590 260q4-100 50-100t50 100" fill="#0b3962">
+         </path>
+         <text fill="#082846" font-family="Arial,sans-serif" font-size="30" font-weight="700" text-anchor="middle" x="450" y="405">
+          Aprender, criar e programar
+         </text>
+        </svg>
+       </div>
+       <figcaption>
+        <strong>
+         Aprendizagem no laborat&oacute;rio
+        </strong>
+        <small>
+         Foto: Governo do Piau&iacute; &middot; rede estadual de ensino
+        </small>
+       </figcaption>
+      </figure>
+      <figure class="photo-card">
+      <img src="seduclab2.jpg" alt="Estudantes em ambiente escolar de aprendizagem" loading="lazy" decoding="async" width="900" height="600">
+       <div aria-label="Ilustra&ccedil;&atilde;o de turma estudando em sala" class="photo-fallback" hidden="">
+        <svg aria-label="Turma de estudantes em sala de aula" role="img" viewbox="0 0 900 480">
+         <rect fill="#eaf2fa" height="480" width="900">
+         </rect>
+         <rect fill="#f5f8fc" height="300" width="900" x="0" y="0">
+         </rect>
+         <rect fill="#0b3962" height="105" rx="10" width="330" x="285" y="55">
+         </rect>
+         <text fill="#fff" font-family="Arial,sans-serif" font-size="36" font-weight="700" text-anchor="middle" x="450" y="122">
+          CETI
+         </text>
+         <g fill="#1768c5">
+          <rect height="18" rx="9" width="710" x="95" y="300">
+          </rect>
+          <rect height="15" rx="7" width="135" x="145" y="350">
+          </rect>
+          <rect height="15" rx="7" width="135" x="380" y="350">
+          </rect>
+          <rect height="15" rx="7" width="135" x="615" y="350">
+          </rect>
+         </g>
+         <g>
+          <circle cx="210" cy="238" fill="#a66d50" r="31">
+          </circle>
+          <circle cx="450" cy="238" fill="#d6a17e" r="31">
+          </circle>
+          <circle cx="690" cy="238" fill="#754b3d" r="31">
+          </circle>
+          <path d="M155 300q5-75 55-75t55 75M395 300q5-75 55-75t55 75M635 300q5-75 55-75t55 75" fill="#0b3962">
+          </path>
+         </g>
+         <text fill="#082846" font-family="Arial,sans-serif" font-size="28" font-weight="700" text-anchor="middle" x="450" y="425">
+          Comunidade escolar &bull; Paes Landim
+         </text>
+        </svg>
+       </div>
+       <figcaption>
+        <strong>
+         Laboratorio escolar seduc
+        </strong>
+        <small>
+         Foto: Governo do Piau&iacute; &middot; Paes Landim
+        </small>
+       </figcaption>
+      </figure>
+     </div>
+    </div>
+   </section>
+   <section id="curso">
+    <div class="container">
+     <div class="section-label">
+      Conhe&ccedil;a a forma&ccedil;&atilde;o
+     </div>
+     <h2 class="section-title">
+      Muito al&eacute;m de aprender a programar
+     </h2>
+     <p class="lead">
+      Desenvolvimento de Sistemas &eacute; uma &aacute;rea para quem gosta de descobrir como as coisas funcionam, pensar em solu&ccedil;&otilde;es e usar a criatividade para construir ferramentas digitais. O curso apresenta fundamentos da tecnologia e aproxima os estudantes da maneira como sites, aplicativos e sistemas s&atilde;o planejados e desenvolvidos.
+     </p>
+     <div class="intro-grid">
+      <div class="intro-panel">
+       <h3>
+        O que &eacute; Desenvolvimento de Sistemas?
+       </h3>
+       <p>
+        &Eacute; o campo da tecnologia dedicado &agrave; cria&ccedil;&atilde;o, manuten&ccedil;&atilde;o e evolu&ccedil;&atilde;o de solu&ccedil;&otilde;es digitais. Um sistema pode facilitar uma tarefa, organizar informa&ccedil;&otilde;es, conectar pessoas, automatizar processos ou tornar um servi&ccedil;o mais acess&iacute;vel. Para construir essas solu&ccedil;&otilde;es, profissionais estudam problemas, planejam funcionalidades, escrevem c&oacute;digo, testam e melhoram continuamente o que criaram.
+       </p>
+       <p>
+        Durante a forma&ccedil;&atilde;o, o estudante come&ccedil;a a compreender esse processo: da ideia inicial at&eacute; a constru&ccedil;&atilde;o de uma solu&ccedil;&atilde;o, passando por l&oacute;gica, linguagens, organiza&ccedil;&atilde;o de dados, interfaces e boas pr&aacute;ticas.
+       </p>
+      </div>
+      <div class="intro-panel">
+       <h3>
+        Por que escolher essa &aacute;rea?
+       </h3>
+       <p>
+        A tecnologia est&aacute; presente em praticamente todos os setores: educa&ccedil;&atilde;o, sa&uacute;de, com&eacute;rcio, comunica&ccedil;&atilde;o, ind&uacute;stria, entretenimento e servi&ccedil;os p&uacute;blicos. Conhecer seu funcionamento pode abrir caminhos para continuar estudando, participar de projetos, desenvolver iniciativas pr&oacute;prias ou buscar oportunidades profissionais no futuro.
+       </p>
+       <p class="highlight">
+        Mais do que decorar comandos, a proposta &eacute; desenvolver autonomia, racioc&iacute;nio, curiosidade e a capacidade de resolver problemas &mdash; habilidades que acompanham o estudante dentro e fora da inform&aacute;tica.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="course-highlights">
+    <div class="container">
+     <div class="section-label">
+      Diferenciais da forma&ccedil;&atilde;o
+     </div>
+     <h2 class="section-title">
+      Por que esse curso pode ser a melhor escolha?
+     </h2>
+     <p class="lead">
+      Uma forma&ccedil;&atilde;o que une Ensino M&eacute;dio e conhecimentos t&eacute;cnicos para voc&ecirc; descobrir seu potencial, desenvolver habilidades e construir projetos com prop&oacute;sito.
+     </p>
+     <div class="course-facts">
+      <span>
+       <strong>
+        3 anos
+       </strong>
+       de forma&ccedil;&atilde;o
+      </span>
+      <span>
+       <strong>
+        Ensino M&eacute;dio integrado
+       </strong>
+      </span>
+      <span>
+       <strong>
+        Tempo integral
+       </strong>
+      </span>
+      <span>
+       <strong>
+        1.200 h
+       </strong>
+       de forma&ccedil;&atilde;o t&eacute;cnica (ement&aacute;rio da rede)
+      </span>
+     </div>
+     <div class="highlight-grid">
+      <article>
+       <span>
+        01
+       </span>
+       <h3>
+        Aprender criando
+       </h3>
+       <p>
+        Pratique os conceitos por meio de desafios, prot&oacute;tipos, p&aacute;ginas, aplicativos e ideias de sistemas.
+       </p>
+      </article>
+      <article>
+       <span>
+        02
+       </span>
+       <h3>
+        Habilidades para o futuro
+       </h3>
+       <p>
+        Desenvolva l&oacute;gica, resolu&ccedil;&atilde;o de problemas, criatividade, comunica&ccedil;&atilde;o, organiza&ccedil;&atilde;o e trabalho em equipe.
+       </p>
+      </article>
+      <article>
+       <span>
+        03
+       </span>
+       <h3>
+        Portf&oacute;lio desde cedo
+       </h3>
+       <p>
+        Projetos autorais podem mostrar sua evolu&ccedil;&atilde;o e ajudar a construir um portf&oacute;lio de aprendizagem.
+       </p>
+      </article>
+      <article>
+       <span>
+        04
+       </span>
+       <h3>
+        Mais possibilidades
+       </h3>
+       <p>
+        Conhe&ccedil;a caminhos em desenvolvimento web, software, dados, banco de dados, suporte e outras &aacute;reas digitais.
+       </p>
+      </article>
+     </div>
+     <div class="seduc-panel">
+      <div class="seduc-mark">
+       <img alt="Secretaria da Educa&ccedil;&atilde;o &mdash; SEDUC e Governo do Piau&iacute;" onerror="this.hidden=true;this.nextElementSibling.hidden=false;" src="https://www.pi.gov.br/wp-content/uploads/2025/11/logo_seduc.png"/>
+       <span hidden="">
+        SEDUC &middot; PIAU&Iacute;
+       </span>
+      </div>
+      <div>
+       <h3>
+        Educa&ccedil;&atilde;o p&uacute;blica, tecnologia e oportunidades
+       </h3>
+       <p>
+        O curso faz parte da Educa&ccedil;&atilde;o Profissional integrada ao Ensino M&eacute;dio da rede estadual. Conhe&ccedil;a tamb&eacute;m os projetos, not&iacute;cias e iniciativas da Secretaria de Educa&ccedil;&atilde;o do Piau&iacute;.
+       </p>
+       <a href="https://seduc.pi.gov.br/" rel="noopener" target="_blank">
+        Visitar o portal oficial da SEDUC-PI &nearrow;
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="soft-section" id="aprendizado">
+    <div class="container">
+     <div class="section-label">
+      Sua jornada tecnol&oacute;gica
+     </div>
+     <h2 class="section-title">
+      Conhecimentos que se conectam
+     </h2>
+     <p class="lead">
+      A forma&ccedil;&atilde;o t&eacute;cnica re&uacute;ne diferentes &aacute;reas que se complementam. Cada conhecimento ajuda a entender uma parte do processo de cria&ccedil;&atilde;o de sistemas e, aos poucos, permite desenvolver projetos mais completos.
+     </p>
+     <div class="cards">
+      <article class="card">
+       <div class="card-icon">
+        🧠
+       </div>
+       <h3>
+        L&oacute;gica e pensamento computacional
+       </h3>
+       <p>
+        Aprender a dividir problemas em etapas, identificar padr&otilde;es, organizar instru&ccedil;&otilde;es e planejar solu&ccedil;&otilde;es. A l&oacute;gica &eacute; a base para programar, independentemente da linguagem utilizada.
+       </p>
+      </article>
+      <article class="card">
+       <div class="card-icon">
+        🌐
+       </div>
+       <h3>
+        Desenvolvimento Web
+       </h3>
+       <p>
+        Conhecer como sites s&atilde;o estruturados, estilizados e tornam-se interativos. Com HTML, CSS e JavaScript, &eacute; poss&iacute;vel criar p&aacute;ginas, menus, formul&aacute;rios e experi&ecirc;ncias digitais.
+       </p>
+      </article>
+      <article class="card">
+       <div class="card-icon">
+        🗃️
+       </div>
+       <h3>
+        Banco de Dados
+       </h3>
+       <p>
+        Organizar e consultar informa&ccedil;&otilde;es com estrutura e seguran&ccedil;a. Estudar tabelas, relacionamentos, registros, consultas e fundamentos da linguagem SQL.
+       </p>
+      </article>
+      <article class="card">
+       <div class="card-icon">
+        ⚙️
+       </div>
+       <h3>
+        Programa&ccedil;&atilde;o
+       </h3>
+       <p>
+        Usar linguagens e ferramentas para transformar ideias em instru&ccedil;&otilde;es que o computador executa. Entender vari&aacute;veis, condi&ccedil;&otilde;es, repeti&ccedil;&otilde;es, fun&ccedil;&otilde;es e estruturas de dados.
+       </p>
+      </article>
+      <article class="card">
+       <div class="card-icon">
+        🧩
+       </div>
+       <h3>
+        An&aacute;lise e planejamento
+       </h3>
+       <p>
+        Antes de escrever c&oacute;digo, compreender quem utilizar&aacute; o sistema, qual problema precisa ser resolvido e quais recursos s&atilde;o necess&aacute;rios. Planejamento faz parte do desenvolvimento.
+       </p>
+      </article>
+      <article class="card">
+       <div class="card-icon">
+        🛡️
+       </div>
+       <h3>
+        Seguran&ccedil;a e responsabilidade
+       </h3>
+       <p>
+        Refletir sobre privacidade, cuidado com dados, uso &eacute;tico da tecnologia, acessibilidade e responsabilidade ao criar ferramentas que outras pessoas podem utilizar.
+       </p>
+      </article>
+     </div>
+     <div class="learning">
+      <article class="learning-card">
+       <span class="mini">
+        Na pr&aacute;tica &middot; Web
+       </span>
+       <h3>
+        Como uma p&aacute;gina ganha vida?
+       </h3>
+       <p>
+        Um site re&uacute;ne diferentes tecnologias trabalhando em conjunto. A estrutura define o conte&uacute;do; o estilo organiza a apar&ecirc;ncia; e a programa&ccedil;&atilde;o permite que a p&aacute;gina responda &agrave;s a&ccedil;&otilde;es de quem est&aacute; navegando.
+       </p>
+       <ul class="list-check">
+        <li>
+         <strong>
+          HTML:
+         </strong>
+         t&iacute;tulos, textos, imagens, links e organiza&ccedil;&atilde;o do conte&uacute;do.
+        </li>
+        <li>
+         <strong>
+          CSS:
+         </strong>
+         cores, tipografia, espa&ccedil;amento, layouts e adapta&ccedil;&atilde;o a telas.
+        </li>
+        <li>
+         <strong>
+          JavaScript:
+         </strong>
+         interatividade, valida&ccedil;&otilde;es, menus e funcionalidades din&acirc;micas.
+        </li>
+       </ul>
+       <div class="sample">
+        <span class="t">
+         &lt;h1&gt;
+        </span>
+        Minha primeira p&aacute;gina
+        <span class="t">
+         &lt;/h1&gt;
+        </span>
+        <br/>
+        <span class="c">
+         &lt;!-- O navegador transforma o c&oacute;digo em conte&uacute;do visual --&gt;
+        </span>
+       </div>
+      </article>
+      <article class="learning-card">
+       <span class="mini">
+        Na pr&aacute;tica &middot; Dados
+       </span>
+       <h3>
+        Como um sistema guarda informa&ccedil;&otilde;es?
+       </h3>
+       <p>
+        Imagine um sistema escolar que precisa organizar estudantes, turmas, atividades e notas. O banco de dados ajuda a guardar os registros de forma estruturada, permitindo consultar, cadastrar e atualizar informa&ccedil;&otilde;es quando necess&aacute;rio.
+       </p>
+       <ul class="list-check">
+        <li>
+         Conhecer tabelas, campos e registros.
+        </li>
+        <li>
+         Relacionar informa&ccedil;&otilde;es para evitar duplicidade.
+        </li>
+        <li>
+         Pesquisar dados com comandos de consulta.
+        </li>
+        <li>
+         Entender por que organiza&ccedil;&atilde;o e seguran&ccedil;a importam.
+        </li>
+       </ul>
+       <div class="sample">
+        <span class="t">
+         SELECT
+        </span>
+        nome, turma
+        <br/>
+        <span class="t">
+         FROM
+        </span>
+        estudantes
+        <br/>
+        <span class="t">
+         WHERE
+        </span>
+        turma =
+        <span class="v">
+         '1&ordm; A'
+        </span>
+        ;
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section>
+    <div class="container">
+     <div class="section-label">
+      Uma forma&ccedil;&atilde;o por etapas
+     </div>
+     <h2 class="section-title">
+      Do primeiro conceito ao projeto
+     </h2>
+     <p class="lead">
+      O aprendizado pode avan&ccedil;ar gradualmente, combinando conceitos, exerc&iacute;cios, experimenta&ccedil;&atilde;o e projetos. A sequ&ecirc;ncia abaixo &eacute; uma vis&atilde;o ilustrativa de uma jornada; as disciplinas e sua distribui&ccedil;&atilde;o dependem da matriz curricular adotada pela escola.
+     </p>
+     <div class="path">
+      <article class="path-item">
+       <span class="year">
+        Etapa inicial
+       </span>
+       <span class="pathnum">
+        01
+       </span>
+       <h3>
+        Descobrir e compreender
+       </h3>
+       <p>
+        Conhecer a tecnologia, desenvolver racioc&iacute;nio l&oacute;gico, aprender a interpretar problemas e dar os primeiros passos na programa&ccedil;&atilde;o. Exerc&iacute;cios ajudam a transformar ideias em instru&ccedil;&otilde;es claras.
+       </p>
+      </article>
+      <article class="path-item">
+       <span class="year">
+        Construir repert&oacute;rio
+       </span>
+       <span class="pathnum">
+        02
+       </span>
+       <h3>
+        Experimentar ferramentas
+       </h3>
+       <p>
+        Explorar linguagens, p&aacute;ginas web, dados, estruturas e recursos de desenvolvimento. Praticar, investigar erros, testar possibilidades e ampliar a compreens&atilde;o de como sistemas funcionam.
+       </p>
+      </article>
+      <article class="path-item">
+       <span class="year">
+        Aplicar conhecimento
+       </span>
+       <span class="pathnum">
+        03
+       </span>
+       <h3>
+        Criar e compartilhar
+       </h3>
+       <p>
+        Planejar solu&ccedil;&otilde;es, unir conhecimentos, trabalhar em equipe, apresentar ideias e aprimorar projetos. Construir experi&ecirc;ncias que demonstrem o aprendizado e incentivam novos desafios.
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="soft-section">
+    <div class="container">
+     <div class="section-label">
+      Ferramentas e linguagens
+     </div>
+     <h2 class="section-title">
+      Um universo de possibilidades
+     </h2>
+     <p class="lead">
+      Existem muitas linguagens e tecnologias na programa&ccedil;&atilde;o. Cada uma possui caracter&iacute;sticas e usos diferentes. Conhecer os fundamentos ajuda a aprender novas ferramentas com mais facilidade.
+     </p>
+     <div class="tech-grid">
+      <article class="tech">
+       <span class="tag">
+        ESTRUTURA
+       </span>
+       <h3>
+        HTML
+       </h3>
+       <p>
+        Organiza o conte&uacute;do e define os elementos de uma p&aacute;gina web.
+       </p>
+      </article>
+      <article class="tech">
+       <span class="tag">
+        APRESENTA&Ccedil;&Atilde;O
+       </span>
+       <h3>
+        CSS
+       </h3>
+       <p>
+        Cria estilos, layouts, identidade visual e adapta&ccedil;&otilde;es para diferentes dispositivos.
+       </p>
+      </article>
+      <article class="tech">
+       <span class="tag">
+        INTERATIVIDADE
+       </span>
+       <h3>
+        JavaScript
+       </h3>
+       <p>
+        Permite adicionar comportamentos, intera&ccedil;&otilde;es e funcionalidades a p&aacute;ginas web.
+       </p>
+      </article>
+      <article class="tech">
+       <span class="tag">
+        L&Oacute;GICA E AUTOMA&Ccedil;&Atilde;O
+       </span>
+       <h3>
+        Python
+       </h3>
+       <p>
+        Uma linguagem vers&aacute;til utilizada em automa&ccedil;&atilde;o, dados, aplica&ccedil;&otilde;es e diversos projetos.
+       </p>
+      </article>
+      <article class="tech">
+       <span class="tag">
+        DADOS
+       </span>
+       <h3>
+        SQL
+       </h3>
+       <p>
+        Utilizada para consultar, inserir, atualizar e organizar dados em bancos relacionais.
+       </p>
+      </article>
+      <article class="tech">
+       <span class="tag">
+        FERRAMENTAS
+       </span>
+       <h3>
+        Git e GitHub
+       </h3>
+       <p>
+        Recursos de versionamento e colabora&ccedil;&atilde;o que ajudam a acompanhar mudan&ccedil;as e compartilhar projetos.
+       </p>
+      </article>
+     </div>
+     <div class="tagline">
+      <span style="font-size:1.8rem">
+       🚀
+      </span>
+      <div>
+       <strong>
+        Voc&ecirc; n&atilde;o precisa saber tudo antes de come&ccedil;ar.
+       </strong>
+       <br/>
+       Curiosidade, pr&aacute;tica e disposi&ccedil;&atilde;o para aprender s&atilde;o &oacute;timos pontos de partida.
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="projetos">
+    <div class="container">
+     <div class="section-label">
+      Aprendizagem que se materializa
+     </div>
+     <h2 class="section-title">
+      Ideias de projetos que podem nascer na sala
+     </h2>
+     <p class="lead">
+      Projetos s&atilde;o uma forma de colocar conhecimentos em pr&aacute;tica. Eles ajudam a exercitar criatividade, planejamento, colabora&ccedil;&atilde;o e a percep&ccedil;&atilde;o de que a tecnologia pode ser criada para atender necessidades reais.
+     </p>
+     <div class="project-grid">
+      <article class="project">
+       <div class="emoji">
+        📚
+       </div>
+       <h3>
+        Organizador de estudos
+       </h3>
+       <p>
+        Uma p&aacute;gina para registrar tarefas, separar mat&eacute;rias, acompanhar prazos e visualizar objetivos de estudo.
+       </p>
+       <small>
+        Interface &middot; Formul&aacute;rios &middot; L&oacute;gica
+       </small>
+      </article>
+      <article class="project">
+       <div class="emoji">
+        🏫
+       </div>
+       <h3>
+        Projeto para a comunidade escolar
+       </h3>
+       <p>
+        Uma solu&ccedil;&atilde;o digital para apresentar informa&ccedil;&otilde;es, divulgar a&ccedil;&otilde;es, organizar eventos ou facilitar algum processo da escola.
+       </p>
+       <small>
+        Pesquisa &middot; Planejamento &middot; Web
+       </small>
+      </article>
+      <article class="project">
+       <div class="emoji">
+        💡
+       </div>
+       <h3>
+        Ideia autoral
+       </h3>
+       <p>
+        Identificar um desafio cotidiano e imaginar uma solu&ccedil;&atilde;o. Prototipar, testar com colegas, receber sugest&otilde;es e evoluir a proposta.
+       </p>
+       <small>
+        Inova&ccedil;&atilde;o &middot; Trabalho em equipe &middot; Prot&oacute;tipo
+       </small>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="soft-section" id="futuro">
+    <div class="container">
+     <div class="section-label">
+      Pr&oacute;ximos passos
+     </div>
+     <h2 class="section-title">
+      Conhecimento que abre caminhos
+     </h2>
+     <p class="lead">
+      A forma&ccedil;&atilde;o t&eacute;cnica pode ser o come&ccedil;o de uma jornada. Ela ajuda a descobrir interesses, fortalecer a base para estudos posteriores e compreender algumas possibilidades de atua&ccedil;&atilde;o no universo da tecnologia.
+     </p>
+     <div class="future">
+      <article class="future-panel">
+       <h3>
+        Poss&iacute;veis &aacute;reas para explorar
+       </h3>
+       <p>
+        Com mais estudos e experi&ecirc;ncia, existem diferentes caminhos dentro da tecnologia. As fun&ccedil;&otilde;es e requisitos variam, e muitas carreiras exigem forma&ccedil;&atilde;o complementar e pr&aacute;tica cont&iacute;nua.
+       </p>
+       <div class="career-tags">
+        <span>
+         Desenvolvimento Web
+        </span>
+        <span>
+         Programa&ccedil;&atilde;o
+        </span>
+        <span>
+         Banco de Dados
+        </span>
+        <span>
+         Suporte de TI
+        </span>
+        <span>
+         Testes de Software
+        </span>
+        <span>
+         Automa&ccedil;&atilde;o
+        </span>
+        <span>
+         Dados
+        </span>
+       </div>
+      </article>
+      <article class="future-panel">
+       <h3>
+        Continuidade dos estudos
+       </h3>
+       <p>
+        O curso t&eacute;cnico tamb&eacute;m pode ajudar quem pretende seguir para o ensino superior. &Aacute;reas como An&aacute;lise e Desenvolvimento de Sistemas, Ci&ecirc;ncia da Computa&ccedil;&atilde;o, Engenharia de Software e Sistemas de Informa&ccedil;&atilde;o permitem aprofundar conhecimentos e explorar novas especialidades.
+       </p>
+       <p>
+        Al&eacute;m do conte&uacute;do t&eacute;cnico, vale desenvolver comunica&ccedil;&atilde;o, ingl&ecirc;s, colabora&ccedil;&atilde;o, organiza&ccedil;&atilde;o, pensamento cr&iacute;tico e responsabilidade &mdash; compet&ecirc;ncias importantes em diferentes caminhos profissionais.
+       </p>
+      </article>
+     </div>
+     <div class="callout">
+      <div>
+       <h3>
+        O futuro tamb&eacute;m pode ser escrito por voc&ecirc;.
+       </h3>
+       <p>
+        Explore, fa&ccedil;a perguntas, experimente ideias e descubra como o conhecimento em tecnologia pode ajudar voc&ecirc; a criar possibilidades para si e para outras pessoas.
+       </p>
+      </div>
+      <a class="btn btn-primary" href="#links">
+       Comece a explorar &nearrow;
+      </a>
+     </div>
+    </div>
+   </section>
+   <section id="perguntas">
+    <div class="container">
+     <div class="section-label">
+      Para quem est&aacute; conhecendo
+     </div>
+     <h2 class="section-title">
+      Perguntas frequentes
+     </h2>
+     <p class="lead">
+      Se voc&ecirc; est&aacute; visitando esta p&aacute;gina para entender melhor o curso, estas respostas podem ajudar a dar os primeiros passos.
+     </p>
+     <div class="faq">
+      <article>
+       <h3>
+        Preciso saber programar antes de entrar?
+       </h3>
+       <p>
+        N&atilde;o &eacute; necess&aacute;rio chegar sabendo desenvolver sistemas. O aprendizado come&ccedil;a pelos fundamentos e evolui com estudo, exerc&iacute;cios, orienta&ccedil;&atilde;o e pr&aacute;tica. Ter curiosidade e vontade de aprender j&aacute; ajuda bastante.
+       </p>
+      </article>
+      <article>
+       <h3>
+        O curso &eacute; s&oacute; para quem gosta de matem&aacute;tica?
+       </h3>
+       <p>
+        Matem&aacute;tica e racioc&iacute;nio l&oacute;gico podem ser &uacute;teis, mas desenvolvimento tamb&eacute;m envolve criatividade, comunica&ccedil;&atilde;o, organiza&ccedil;&atilde;o, pesquisa, design, colabora&ccedil;&atilde;o e compreens&atilde;o das necessidades de outras pessoas.
+       </p>
+      </article>
+      <article>
+       <h3>
+        Vou aprender a criar sites?
+       </h3>
+       <p>
+        O desenvolvimento web &eacute; uma das &aacute;reas relacionadas &agrave; forma&ccedil;&atilde;o. Os conceitos de estrutura, estilo e interatividade s&atilde;o importantes para entender como p&aacute;ginas e aplica&ccedil;&otilde;es web s&atilde;o constru&iacute;das.
+       </p>
+      </article>
+      <article>
+       <h3>
+        O que posso fazer com o que aprender?
+       </h3>
+       <p>
+        Voc&ecirc; pode criar projetos pessoais, continuar estudando, montar um portf&oacute;lio, participar de atividades e conhecer &aacute;reas profissionais de tecnologia. O curso &eacute; uma base; a evolu&ccedil;&atilde;o depende tamb&eacute;m da pr&aacute;tica e da continuidade.
+       </p>
+      </article>
+      <article>
+       <h3>
+        Como &eacute; estudar em tempo integral?
+       </h3>
+       <p>
+        A rotina integra as atividades do Ensino M&eacute;dio &agrave; forma&ccedil;&atilde;o profissional, com uma jornada escolar ampliada. A organiza&ccedil;&atilde;o espec&iacute;fica, as atividades e a matriz curricular s&atilde;o definidas pela escola e pela rede de ensino.
+       </p>
+      </article>
+      <article>
+       <h3>
+        O que torna um projeto interessante?
+       </h3>
+       <p>
+        Uma boa ideia n&atilde;o precisa ser enorme. Projetos &uacute;teis, bem pensados, acess&iacute;veis e que resolvem um problema real s&atilde;o &oacute;timas oportunidades de aprender. O processo de criar, testar e melhorar &eacute; parte essencial.
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="soft-section" id="links">
+    <div class="container">
+     <div class="section-label">
+      Continue explorando
+     </div>
+     <h2 class="section-title">
+      Recursos para dar seus primeiros passos
+     </h2>
+     <p class="lead">
+      N&atilde;o espere dominar tudo para come&ccedil;ar. Consulte materiais, pratique com pequenos exemplos, explore tutoriais e crie seus pr&oacute;prios desafios. Aprender programa&ccedil;&atilde;o &eacute; um processo cont&iacute;nuo de tentativa, descoberta e evolu&ccedil;&atilde;o.
+     </p>
+     <div class="resources">
+      <a class="resource" href="https://edu.pi.gov.br/" rel="noopener" target="_blank">
+       <strong>
+        🏛️ SEDUC-PI
+       </strong>
+       <small>
+        Portal da Secretaria de Educa&ccedil;&atilde;o do Piau&iacute; &nearrow;
+       </small>
+      </a>
+      <a class="resource" href="https://developer.mozilla.org/pt-BR/" rel="noopener" target="_blank">
+       <strong>
+        🌐 MDN Web Docs
+       </strong>
+       <small>
+        Refer&ecirc;ncias e guias para tecnologias web &nearrow;
+       </small>
+      </a>
+      <a class="resource" href="https://www.freecodecamp.org/portuguese/" rel="noopener" target="_blank">
+       <strong>
+        🎯 freeCodeCamp
+       </strong>
+       <small>
+        Trilhas e pr&aacute;tica de desenvolvimento &nearrow;
+       </small>
+      </a>
+      <a class="resource" href="https://www.python.org/" rel="noopener" target="_blank">
+       <strong>
+        🐍 Python
+       </strong>
+       <small>
+        Site oficial e documenta&ccedil;&atilde;o &nearrow;
+       </small>
+      </a>
+      <a class="resource" href="https://github.com/" rel="noopener" target="_blank">
+       <strong>
+        🐙 GitHub
+       </strong>
+       <small>
+        Compartilhe e acompanhe seus projetos &nearrow;
+       </small>
+      </a>
+      <a class="resource" href="https://www.w3schools.com/" rel="noopener" target="_blank">
+       <strong>
+        📘 W3Schools
+       </strong>
+       <small>
+        Introdu&ccedil;&atilde;o e exemplos de programa&ccedil;&atilde;o &nearrow;
+       </small>
+      </a>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <div class="container footer">
+    <div class="footer-grid">
+     <div>
+      <div class="footer-brand">
+       <span aria-hidden="true" class="brandmark" style="font:800 1rem Manrope,sans-serif;letter-spacing:-.04em">
+        HN
+       </span>
+       <strong>
+        CETI Helv&iacute;dio Nunes
+       </strong>
+      </div>
+      <p>
+       Apresenta&ccedil;&atilde;o do Curso T&eacute;cnico em Desenvolvimento de Sistemas. Um convite para conhecer a forma&ccedil;&atilde;o, descobrir o universo da tecnologia e imaginar o que &eacute; poss&iacute;vel criar.
+      </p>
+     </div>
+     <div>
+      <h4>
+       Navegue pelo site
+      </h4>
+      <a href="#curso">
+       Sobre o curso
+      </a>
+      <a href="#aprendizado">
+       O que se aprende
+      </a>
+      <a href="#projetos">
+       Projetos
+      </a>
+      <a href="#futuro">
+       Caminhos futuros
+      </a>
+     </div>
+     <div>
+      <h4>
+       Institui&ccedil;&otilde;es
+      </h4>
+      <a href="https://edu.pi.gov.br/" rel="noopener" target="_blank">
+       Secretaria de Educa&ccedil;&atilde;o do Piau&iacute; (SEDUC-PI) &nearrow;
+      </a>
+      <a href="#links">
+       Materiais e ferramentas
+      </a>
+      <a href="#perguntas">
+       Perguntas frequentes
+      </a>
+     </div>
+    </div>
+    <div class="copyright">
+     &copy; 2026 &middot; CETI Helv&iacute;dio Nunes &middot; Curso T&eacute;cnico em Desenvolvimento de Sistemas
+     <br/>
+     <div class="official-note">
+      P&aacute;gina informativa de apresenta&ccedil;&atilde;o. Elementos gr&aacute;ficos SEDUC-PI nesta p&aacute;gina s&atilde;o identificadores textuais/visuais de refer&ecirc;ncia e n&atilde;o substituem o uso do logotipo oficial. Disciplinas e atividades podem variar conforme a organiza&ccedil;&atilde;o curricular da escola.
+     </div>
+    </div>
+   </div>
+  </footer>
+
+  <script>
+   (() => {
+     const button = document.querySelector('.nav-toggle');
+     const menu = document.querySelector('#main-navigation');
+     if (!button || !menu) return;
+
+     const closeMenu = () => {
+       menu.classList.remove('is-open');
+       button.setAttribute('aria-expanded', 'false');
+       button.setAttribute('aria-label', 'Abrir menu');
+     };
+
+     button.addEventListener('click', () => {
+       const willOpen = button.getAttribute('aria-expanded') !== 'true';
+       button.setAttribute('aria-expanded', String(willOpen));
+       button.setAttribute('aria-label', willOpen ? 'Fechar menu' : 'Abrir menu');
+       menu.classList.toggle('is-open', willOpen);
+     });
+
+     menu.querySelectorAll('a').forEach(link => {
+       link.addEventListener('click', closeMenu);
+     });
+
+     document.addEventListener('keydown', event => {
+       if (event.key === 'Escape') closeMenu();
+     });
+
+     window.addEventListener('resize', () => {
+       if (window.innerWidth > 900) closeMenu();
+     }, { passive: true });
+   })();
+  </script>
+
+  <script>
+   (() => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const targets = document.querySelectorAll('main section, .proof, .callout, .footer-grid');
+  targets.forEach(el => el.classList.add('reveal'));
+  document.querySelectorAll('.cards, .learning, .path, .tech-grid, .project-grid, .future, .faq, .resources, .proof-grid').forEach(el => el.classList.add('reveal-stagger'));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } });
+  }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => observer.observe(el));
+  const bar = document.querySelector('.scroll-progress');
+  const update = () => { const max = document.documentElement.scrollHeight - window.innerHeight; bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%'; };
+  window.addEventListener('scroll', update, {passive:true}); update();
+})();
+  </script>
+ </body>
+</html>
